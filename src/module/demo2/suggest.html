@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name = "format-detection" content = "telephone=no">
+    <title>项目2</title>
+    <style>
+       #loading{
+            position:absolute;
+            top:0;
+            bottom:0;
+            left:0;
+            right:0;
+            z-index: 9999
+        }
+        .f-loding{
+            width:100px;
+            height: 100px;
+            border-radius: 10px;
+            background: rgba(0,0,0,0.5);
+            position: absolute;
+            top:30%;
+            left:50%;
+            margin-left:-50px;
+        }
+        .anim-img{
+            position:absolute;
+            width:50%;
+            height:50%;
+            background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAAAP1BMVEVHcEz///////////////////////////////////////////////////////////////////////////////9KjZoYAAAAFHRSTlMAP4CwwCBAEPAw0HBgoOCQUL9/3z1IcgQAAAHkSURBVFjD7VdLloQgDGRECIgiat3/rLPQtkkPSOb55rPoLJWUISmTilKXZtaV1B1bAH0LAAB+GyAsqQ7gdWj5jwDGGoBx7GXROgCOKgALgK4BYABgLgMkoB2BmgHAlwDIAeibSSQHYCkBcOiLMgBA+ArgIciAUkqpmOVRA1OWwSjitc0+RSHQs75IMi7pUqydKIMnXwYqxOVMnX/bYPNK2MIZn3L/NJzJeSRYG/kPYzQAGA4At0r9VwcOoDoAAAYrqtK2n2akNv3+cGoWmubjY6+ctANEVJv265b6whiBPLVl6y8Cpa5Q/1dLQLS32qS55/62cvE+HualLv50IaVoZyBELTtrTgehaW9ghwk7Tp+52H2SHDbJAKbMxShl5343HYRagoI+XOY3K/8hqdel3VSNXmrSMW0QqMIJwGarw6YNcBwzlWHjmn+kd6Ux5o9hMwvIXJos5MrDphbE3gHciyZxQV6v4AAgC3d4GTbFm7ADEzCwyZhHT0NBjBjH24W313K3Ez28ULuPhBDlEkImYpZMJ4YTiivYxvh99mf3rJZUKHJJnWvlHsDWZlpdrXu+CdRYxnUO2xdEcr3jkpoBkEQDBZ4pvvIkwR1Ix7G+tY1Rf3OR/YvF88v2Em8BpBh/en5+AtQ5KU/azq3eAAAAAElFTkSuQmCC) center no-repeat;
+            background-size: 100%;
+            transform: translate(0,0,0);
+            transform-origin: center;
+            left:25%;
+            top:25%;
+            transform: translate(-50%,-50%);
+            animation:-2s rotates 2s infinite both;
+            -webkit-animation:-2s rotates 2s linear infinite both;
+            -webkit-backface-visibility: hidden;
+            opacity: 1;
+        }
+        @keyframes rotates{
+            0%{
+                transform: rotateZ(0);
+            }
+            100%{
+                transform: rotateZ(360deg);
+            }
+        }
+        @-webkit-keyframes rotates{
+            0%{
+                -webkit-transform: rotateZ(0);
+            }
+            100%{
+                -webkit-transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="loading">
+        <div class="f-loding">
+            <span class="anim-img"></span>
+        </div>
+    </div>
+    <div id="app"></div>
+</body>
+</html>
